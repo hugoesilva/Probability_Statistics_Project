@@ -1,8 +1,6 @@
 # probabilidade do tempo de atendimento de um doente
 # escolhido ao acaso ser maior do que 13
 
-#?rexp
-
 seed = 1943
 n = 595
 lambda = 0.13
@@ -13,7 +11,9 @@ generatedValues = rexp(n, lambda)
 fAux = ecdf(generatedValues)
 generatedValues
 
-valor_teorico = 1 - pexp(14, lambda)
+
+#confirmar
+valor_teorico = 1 - pexp(13, lambda)
 valor_teorico
 
 valor_pratico = 1 - fAux(13)
